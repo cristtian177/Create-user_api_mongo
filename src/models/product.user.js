@@ -13,7 +13,7 @@ const productSchema = new Schema(
         lastName: { type: String, required: true},
         email: { type: String, required: true}, // las llaves de lacollecion
         password: { type: String, required: true},
-        isAdmin: { type: Boolean, required: true},
+        isAdmin: { type: Boolean, default: false },
     },
     {
         versionKey: false, // que deseamos capturar cada que se inserte un dato

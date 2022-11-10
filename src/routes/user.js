@@ -23,10 +23,7 @@ router.post("/create-user", async (req, res) => {
     
     for(let local_database of products ){
         if(req.body.email === local_database.email){
-            return [
-                console.log(`email local-- ${req.body.email} ||| email_mongo-- ${local_database.email}`),
-                res.status(400).json({msg: "Email Extistente"})
-            ]
+            return  res.json({msg: "Email Extistente"})
         }
     } 
 
